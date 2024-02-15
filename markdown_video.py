@@ -18,7 +18,8 @@ HTML = """
 </div>
 """
 
-RE_YOUTUBE = re.compile(r"^https?://www\.youtube\.com/watch\?v=(\w+)")
+RE_YOUTUBE = re.compile(r"^https?://www\.youtube\.com/watch\?v=([\w-]+)")
+
 
 class VideoInlineProcessor(InlineProcessor):
     def handleMatch(self, m, data):
